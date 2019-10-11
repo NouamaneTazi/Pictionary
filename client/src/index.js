@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch, Redirect, Router } from "react-router-dom
 import Cookies from 'js-cookie';
 import axios from "axios/index";
 import {createBrowserHistory} from "history";
+require('dotenv').config();
 
 class App extends React.Component{
     constructor(props) {

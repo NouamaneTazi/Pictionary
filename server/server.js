@@ -1,12 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 const app = express();
 const http = require('http');
 let server = http.createServer(app);
 const io = require('socket.io')(server);
-const port = process.env.PORT || 3001;
 var cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
+const mongoose = require('mongoose');
 
 app.use(cors({
     origin:"http://localhost:3000",
@@ -14,6 +15,15 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(cookieParser());
+
+
+const uri=process.env.ATLAS_URI;
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true , useCreateIndex:true, useFindAndModify:false});
+
+const connection = mongoose.connection;
+connection.once('open', () => {
+    console.log("MongoDB database connection established successfully");
+});
 
 const Userdb = require('./models/user.js');
 const Salondb = require('./models/salon.js');
@@ -297,12 +307,22 @@ io.sockets.on('connection', (socket)=>{
     })
     socket.on('updateDrawnWord', (room_id,mot) => {
         if (mot) {
-            _salons[room_id].wordWasChosen=true
+            _salons[room_id].wordWasChosen=true;
             _salons[room_id].currentMot=mot
         }
     })
 });
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static('client/build'));
+    app.use('*', express.static('client/build'));
+
+    app.get('*', (req,res)=>{
+        res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+    })
+}
+
+const port = process.env.PORT || 3001;
 
 server.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
