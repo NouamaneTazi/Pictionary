@@ -12,9 +12,12 @@ const mongoose = require('mongoose');
 const port = process.env.PORT || 3001;
 
 app.use(cors({
-    origin:`http://localhost:3000`,
+    // origin:`http://localhost:3000`,
+    origin:false,
     credentials:true
 }));
+// INFO credentials:true because HTTP sessions are a tried and true mechanism to deal with authentication on the web.
+// However, HTTP Sessions rely on cookies, which are not sent by default over CORS.
 app.use(express.json());
 app.use(cookieParser());
 
@@ -28,10 +31,10 @@ connection.once('open', () => {
 });
 
 const Userdb = require('./models/user.js');
-const Salondb = require('./models/salon.js');
 const Motdb = require('./models/mot.js');
+const Salondb = require('./models/salon.js');
 
-app.post('/session-checker',function(req,res) {
+app.post('/api/session-checker',function(req,res) {
     Userdb.findOne({ userId:req.body.userId }, function(err, result) {
         if (result==null) {
             console.log("token not found in db");
@@ -46,10 +49,10 @@ app.post('/session-checker',function(req,res) {
         }
     });
 });
-
-app.get('/',function(req,res) {
-    res.send(req.cookies.access_token);
-});
+//
+// app.get('/',function(req,res) {
+//     res.send(req.cookies.access_token);
+// });
 
 
 app.post('/api/login', (req,res) => {
@@ -87,30 +90,9 @@ app.post('/api/logout', (req) => {
 })
 
 
-app.post('/salons/add', (req,res) => {
-    let data={
-        name:req.body.name ,
-        created_at:Date(),
-        created_by:req.body.username
-    }
-    let new_salon= new Salondb(data)
-    new_salon.save((err,salon)=>{
-        data._id=salon.id;
-        data.users=[];
-        _salons[salon.id]= data
-        io.sockets.emit("updateSalons",_salons)
-    })
+app.use('/salons', require('./routes/salons'))
 
-    res.send(true)
-});
-app.post('/salons/delete', (req,res) => {
-    Salondb.deleteOne({_id:req.body.room_id}, function (err) {
-        if (err) throw err;
-    });
-    delete _salons[req.body.room_id]
-    io.sockets.emit("updateSalons",_salons)
-    res.send(true)
-});
+
 app.post('/mots/add', (req,res) => {
     let data={
         content:req.body.mot ,
@@ -319,9 +301,9 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static('client/build'));
     app.use('*', express.static('client/build'));
 
-    app.get('*', (req,res)=>{
-        res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-    })
+    // app.get('*', (req,res)=>{
+    //     res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+    // })
 }
 
 

@@ -21,7 +21,11 @@ class App extends React.Component{
 
     updatestatewithtoken(){
         const userId=Cookies.get('userId');
-        axios('/session-checker', {
+        // INFO create-react-app will automatically set the request origin to whatever the "proxy" setting is in
+        // package.json while in development mode, but will reset it to wherever it is being served from in
+        // production mode without you having to do anything!
+        // that's why '/session-checker' instead of 'localhost:3001/session-checker'
+        axios('/api/session-checker', {
             method: "post",
             data: {userId:userId},
             withCredentials: true

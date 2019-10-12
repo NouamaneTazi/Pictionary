@@ -59,7 +59,7 @@ function Form(props) {
 
 export default function Mots(props) {
     const handleClick=(mot)=>{
-        axios.post('http://localhost:3001/mots/delete',{mot:mot})
+        axios.post('/mots/delete',{mot:mot})
             .catch(function (error) {
                 console.log(error);
             })

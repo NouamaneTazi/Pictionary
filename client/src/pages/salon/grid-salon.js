@@ -117,18 +117,6 @@ export default function GridSalon(props) {
                 </Paper>
             </div>
         )
-        // return users.map((user)=>{
-        //             // <Typography  component={'div'} key={user}>
-        //             //     <Box fontWeight="fontWeightBold" m={1} display={"inline"} >
-        //             //         • {user}
-        //             //     </Box>
-        //             //     {user===props.drawer&&
-        //             //         <img src={brush} alt="Brush" width={20}/>
-        //             //     }
-        //             // </Typography>
-        //         )
-        //     }
-        // )
     }
     const sortUsers= users=>{
         users.sort((a, b) => (a.score < b.score || (a.score===b.score && a.username > b.username)) ? 1 : -1)
@@ -141,7 +129,6 @@ export default function GridSalon(props) {
                     socket={props.socket}
                     room_id={props.room_id}
                     timeleft={props.timeleft}
-                    updateDrawer={props.updateDrawer}
                     maxTime={props.maxTime}
                 />
             </Card>

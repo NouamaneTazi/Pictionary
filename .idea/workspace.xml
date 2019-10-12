@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b4df431-56c9-4937-bc72-52b1351f149d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/salons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/lobby/salons-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/lobby/salons-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/lobby/salons.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/lobby/salons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/mots.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/mots.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/salon/grid-salon.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/salon/grid-salon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/users.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,8 +26,11 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-784">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="247">
+              <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,42 +38,35 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="285">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="salons.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/routes/salons.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/package.json">
+        <entry file="file://$PROJECT_DIR$/server/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sign-in.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/pages/sign-in.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1337" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/pages/navbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            <state relative-caret-position="114">
+              <caret line="6" column="14" selection-start-line="6" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -86,12 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>manc</find>
-      <find>OPEN</find>
-      <find>props.</find>
-      <find>maxTi</find>
-      <find>typog</find>
-      <find>startT</find>
       <find>manche</find>
       <find>props.ch</find>
       <find>cell</find>
@@ -107,7 +98,6 @@
       <find>jwt</find>
       <find>id</find>
       <find>id in</find>
-      <find>users</find>
       <find>mongo</find>
       <find>Userdb</find>
       <find>User</find>
@@ -116,10 +106,15 @@
       <find>axios</find>
       <find>favicon</find>
       <find>port</find>
+      <find>axios.</find>
+      <find>users</find>
+      <find>app</find>
+      <find>birds</find>
+      <find>salondb</find>
+      <find>index</find>
+      <find>index.html</find>
     </findStrings>
     <replaceStrings>
-      <replace>root</replace>
-      <replace>generate_chat</replace>
       <replace>DrawingApp</replace>
       <replace>this.props.socket</replace>
       <replace>size</replace>
@@ -148,9 +143,13 @@
       <replace>brush</replace>
       <replace>game_ended</replace>
       <replace>userGuessedCorrectly</replace>
+      <replace>router</replace>
+      <replace>salons</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Nouamane\WebstormProjects\Pictionary</dir>
+      <dir>C:\Users\Nouamane\WebstormProjects\Pictionary\client</dir>
+      <dir>C:\Users\Nouamane\WebstormProjects\Pictionary\server</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -160,10 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/components/navbar.js" />
-        <option value="$PROJECT_DIR$/client/src/components/account_form.js" />
-        <option value="$PROJECT_DIR$/client/src/components/sign-in.js" />
-        <option value="$PROJECT_DIR$/client/src/components/private-route.js" />
         <option value="$PROJECT_DIR$/client/src/pages/exercises-list.js" />
         <option value="$PROJECT_DIR$/client/src/pages/test-page.js" />
         <option value="$PROJECT_DIR$/client/src/pages/admin/admin-test-page.js" />
@@ -186,14 +181,12 @@
         <option value="$PROJECT_DIR$/client/src/pages/navbar.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/mots.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/salons-list.js" />
-        <option value="$PROJECT_DIR$/client/src/pages/mots.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/game-end-dialog.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/pen-slider.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/time_left_bar.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/salons.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/drawer-dialog.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/drawing-app.js" />
-        <option value="$PROJECT_DIR$/server/index.html" />
         <option value="$PROJECT_DIR$/client/src/pages/member/grid-salon.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/chat-form.js" />
         <option value="$PROJECT_DIR$/client/src/pages/member/salon.js" />
@@ -208,8 +201,14 @@
         <option value="$PROJECT_DIR$/server/models/user.js" />
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/client/package.json" />
+        <option value="$PROJECT_DIR$/client/src/pages/mots.js" />
+        <option value="$PROJECT_DIR$/client/src/pages/salon/grid-salon.js" />
+        <option value="$PROJECT_DIR$/client/src/pages/lobby/salons.js" />
+        <option value="$PROJECT_DIR$/server/routes/users.js" />
+        <option value="$PROJECT_DIR$/server/routes/salons.js" />
+        <option value="$PROJECT_DIR$/server/index.html" />
+        <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
       </list>
     </option>
@@ -233,9 +232,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -245,6 +244,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,20 +266,18 @@
             <path>
               <item name="Pictionary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pictionary" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pictionary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pictionary" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +294,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -363,7 +361,8 @@
       <workItem from="1570700682353" duration="9919000" />
       <workItem from="1570755418151" duration="1134000" />
       <workItem from="1570783661213" duration="992000" />
-      <workItem from="1570801827801" duration="9828000" />
+      <workItem from="1570801827801" duration="10522000" />
+      <workItem from="1570885223181" duration="4752000" />
     </task>
     <task id="LOCAL-00001" summary="Creation">
       <created>1570711172707</created>
@@ -397,25 +396,35 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360547000" />
+    <option name="totallyTimeSpent" value="365993000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.32905984" />
       <window_info id="DB Browser" order="2" weight="0.3295302" />
       <window_info anchor="bottom" id="DB Execution Console" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32905984" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49932885" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32905984" />
       <window_info anchor="right" id="Mongo Explorer" order="0" weight="0.2442953" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49932885" visible="true" weight="0.28917378" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17181209" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49932885" visible="true" weight="0.2948718" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16040269" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.2991453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -427,29 +436,29 @@
       <window_info id="npm" order="3" side_tool="true" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Find" order="5" weight="0.2991453" />
+      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49932885" weight="0.32905984" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Mongo Explorer" order="0" weight="0.2442953" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
+      <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.32905984" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17181209" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="DB Execution Console" order="0" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info id="DB Browser" order="2" weight="0.3295302" />
-      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.2991453" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49932885" visible="true" weight="0.21225071" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32905984" />
+      <window_info anchor="right" id="Mongo Explorer" order="0" weight="0.2442953" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49932885" weight="0.32905984" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32905984" />
-      <window_info id="npm" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49932885" visible="true" weight="0.21225071" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,20 +520,11 @@
     <entry file="file://$PROJECT_DIR$/client/src/pages/account_form.js" />
     <entry file="file://$PROJECT_DIR$/client/node_modules/@types/react/index.d.ts" />
     <entry file="file://$PROJECT_DIR$/client/src/components/auth.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/pages/mots.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/game-end-dialog.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/drawer-dialog.js" />
-    <entry file="file://$PROJECT_DIR$/server/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/pen-slider.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/time_left_bar.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/drawing-app.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/pages/lobby/salons-list.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/chat-form.js" />
     <entry file="file://$PROJECT_DIR$/server/services/jwt-module.js" />
     <entry file="file://$PROJECT_DIR$/server/.eslintrc.js">
@@ -533,14 +533,9 @@
     <entry file="file://$PROJECT_DIR$/client/src/pages/component_func_example.js" />
     <entry file="file://$PROJECT_DIR$/server/routes/exercises.js" />
     <entry file="file://$PROJECT_DIR$/server/models/exercise.js" />
-    <entry file="file://$PROJECT_DIR$/server/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/pages/test-socket.js" />
     <entry file="file://$PROJECT_DIR$/client/src/pages/lobby/test.js" />
     <entry file="file://$PROJECT_DIR$/client/src/pages/salon/salon.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/pages/lobby/salons.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/pages/salon/grid-salon.js" />
     <entry file="file://$PROJECT_DIR$/client/src/pages/home.js" />
     <entry file="file://$PROJECT_DIR$/aaa/test.js" />
     <entry file="file://$PROJECT_DIR$/client/public/index.html">
@@ -564,9 +559,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/.env">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/.env" />
     <entry file="file://$PROJECT_DIR$/server/models/salon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -591,31 +584,8 @@
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/pages/sign-in.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1337" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-784">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/client/node_modules/react-scripts/config/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -626,22 +596,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/pages/navbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
+        <state>
           <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="817">
           <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/pages/salon/grid-salon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="129" column="43" lean-forward="true" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/pages/lobby/salons-list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/pages/mots.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/pages/lobby/salons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="14" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/salons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="285">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
