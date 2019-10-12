@@ -9,7 +9,7 @@ var cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 
-const port = process.env.PORT || 3001;
+    const port = process.env.PORT || 3001;
 
 app.use(cors({
     // origin:[`http://localhost:3000`],

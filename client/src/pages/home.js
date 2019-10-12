@@ -27,7 +27,7 @@ export default class MemberHome extends React.Component {
         // this.props.history.push('/home/oops', { some: 'state' });
         // unlisten();
 
-        const socket = io("http://localhost:3001");
+        const socket = io();
         socket.on('connect', () => {
             console.log('Connected');
         });
