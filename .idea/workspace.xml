@@ -29,8 +29,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="266">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -56,7 +56,7 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
+            <state relative-caret-position="-57">
               <caret line="6" column="14" selection-start-line="6" selection-end-line="7" />
             </state>
           </provider>
@@ -266,19 +266,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nouamane\WebstormProjects\Pictionary\server" />
+      <recent name="C:\Users\Nouamane\WebstormProjects\Pictionary" />
+      <recent name="C:\Users\Nouamane\WebstormProjects\Pictionary\server\models" />
+      <recent name="C:\Users\Nouamane\WebstormProjects\untitled1\client\src\pages\member" />
+      <recent name="C:\Users\Nouamane\WebstormProjects\untitled1\client\src\pages" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Nouamane\WebstormProjects\Pictionary\server" />
       <recent name="C:\Users\Nouamane\WebstormProjects\final version\aaa" />
       <recent name="C:\Users\Nouamane\WebstormProjects\final version\client\src\pages\salon" />
       <recent name="C:\Users\Nouamane\WebstormProjects\final version\client\src\components" />
       <recent name="C:\Users\Nouamane\WebstormProjects\final version\client\src\pages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Nouamane\WebstormProjects\Pictionary" />
-      <recent name="C:\Users\Nouamane\WebstormProjects\Pictionary\server\models" />
-      <recent name="C:\Users\Nouamane\WebstormProjects\untitled1\client\src\pages\member" />
-      <recent name="C:\Users\Nouamane\WebstormProjects\untitled1\client\src\pages" />
-      <recent name="C:\Users\Nouamane\WebstormProjects\untitled1\client\src\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -331,7 +331,7 @@
       <workItem from="1570755418151" duration="1134000" />
       <workItem from="1570783661213" duration="992000" />
       <workItem from="1570801827801" duration="10522000" />
-      <workItem from="1570885223181" duration="5006000" />
+      <workItem from="1570885223181" duration="5501000" />
     </task>
     <task id="LOCAL-00001" summary="Creation">
       <created>1570711172707</created>
@@ -365,7 +365,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366247000" />
+    <option name="totallyTimeSpent" value="366742000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,6 +378,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32905984" />
       <window_info id="DB Browser" order="2" weight="0.3295302" />
@@ -565,13 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/pages/salon/grid-salon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -605,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="14" selection-start-line="6" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -626,6 +613,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="6" column="14" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -636,16 +643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state relative-caret-position="266">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>

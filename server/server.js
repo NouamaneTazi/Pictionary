@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 const port = process.env.PORT || 3001;
 
 app.use(cors({
-    origin:`http://localhost:3000`,
+    origin:[`http://localhost:3000`,"http://nouamane-pictionary.herokuapp.com","nouamane-pictionary.herokuapp.com","https://nouamane-pictionary.herokuapp.com",/\.nouamane-pictionary.herokuapp\.com$/],
     credentials:true
 }));
 // INFO credentials:true because HTTP sessions are a tried and true mechanism to deal with authentication on the web.
