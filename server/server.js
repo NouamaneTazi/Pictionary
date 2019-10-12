@@ -83,6 +83,19 @@ app.post('/api/login', (req,res) => {
         }
     });
 });
+app.post('/api/signup', (req,res) => {
+    const entry={username:req.body.username, password: req.body.password, is_admin:false};
+    Userdb.findOne({ username: entry.username }, function(err, result) {
+        if (result==null) {
+            let new_user=new Userdb(entry)
+            new_user.save()
+            res.send({confirmation:"success"})
+        } else {
+            res.send({confirmation:"error",error:"Username already exists."})
+        }
+    });
+});
+
 app.post('/api/logout', (req) => {
     Userdb.updateOne({username:req.body.username},{ userId: ""} ,(err)=>{
         if (err) throw err;

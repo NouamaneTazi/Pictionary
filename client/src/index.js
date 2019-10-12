@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SignIn from "./pages/sign-in"
+import SignUp from "./pages/sign-up"
 import Home from "./pages/home";
 import { BrowserRouter, Route, Switch, Redirect, Router } from "react-router-dom";
 import Cookies from 'js-cookie';
@@ -61,13 +62,14 @@ class App extends React.Component{
     render(){
         return (
             <div className="App">
-                <Switch>
-                    <Router history={this.state.history}>
+                <Router history={this.state.history}>
+                    <Switch>
                         <Route exact path="/signin" component={SignIn}/>
+                        <Route exact path="/signup" component={SignUp}/>
                         <Route path="/" render={ (props)=>this.protectedRoute(props,Home) } />
                         {/*<Route path="*" component={() => "404 NOT FOUND"} />*/}
-                    </Router>
-                </Switch>
+                    </Switch>
+                </Router>
             </div>
         );
     }

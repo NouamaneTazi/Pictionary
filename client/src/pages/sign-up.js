@@ -14,22 +14,8 @@ import axios from 'axios';
 import Snackbar from "../components/snackbar";
 import Grid from '@material-ui/core/Grid';
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://www.linkedin.com/in/nouamane-tazi-580569164/">
-                Nouamane Tazi
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
 
-//TODO user alrdy connected
-//TODO wrong informations message
-//TODO Case sensitive
+
 const useStyles = makeStyles(theme => ({
     '@global': {
         body: {
@@ -57,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default class SignIn extends React.Component{
+export default class SignUp extends React.Component{
     constructor(props) {
         super(props);
         this.onChangeUsername = this.onChangeUsername.bind(this);
@@ -86,29 +72,33 @@ export default class SignIn extends React.Component{
         })
     }
     handleClick(e){
+
         e.preventDefault();
-        console.log("submitted");
+        console.log("submitted")
+        if (!this.state.username || !this.state.password) {
+            let errors=this.state.errors.slice()
+            errors.push({message:"Please enter a valid Username and Password.",messageType:"error"})
+            this.setState({errors})
+            return
+        }
         const entry = {username:this.state.username.toLowerCase(), password:this.state.password.toLowerCase()};
         this.setState({
             username: '',
             password: '',
         });
-        axios('/api/login', {
+        axios('/api/signup', {
             method: "post",
             data: entry,
             withCredentials: true
         }).then( res => {
                 // console.log(res.data);
-                if (res.data.confirmation==="success"){ //token is in cookie now
-                    auth.login(res.data.userId,() => {
-                        this.props.history.push("/")
+                if (res.data.confirmation==="success"){
+                    console.log("account created")
+                    this.props.history.push({
+                        pathname: '/signin',
+                        state: { confirmation: "success",message:"Account created successfully !" }
                     })
-                } else if(res.data.warning) { //if token not found in db
-                    let errors=this.state.errors.slice()
-                    errors.push({message:res.data.warning,messageType:"warning"})
-                    this.setState({errors})
-
-                } else if (res.data.error){
+                } else if (res.data.error){ //username already exists
                     let errors=this.state.errors.slice()
                     errors.push({message:res.data.error,messageType:"error"})
                     this.setState({errors})
@@ -119,15 +109,7 @@ export default class SignIn extends React.Component{
         // window.location = '/';
 
     };
-    componentDidMount(){
-        console.log("history",this.props.history.location)
-        if (this.props.history.location.state && this.props.history.location.state.confirmation==="success"){
-            let errors=this.state.errors.slice()
-            errors.push({message:this.props.history.location.state.message,messageType:"success"})
-            this.setState({errors})
-            window.history.replaceState(null, null, "/"); //Empty history state from confirmation and message
-        }
-    }
+
     render(){
         return (
             <Container component="main" maxWidth="xs" style={{marginTop:"60px", padding:"0px"}}>
@@ -140,7 +122,6 @@ export default class SignIn extends React.Component{
                     {this.state.errors.map(({message,messageType})=> <Snackbar messageType={messageType} message={message} />
                     )}
 
-                    {/*<Snackbar messageType={"error"} message={"Wrong Email Address or Password."}/>*/}
                     <form className={this.classes.form} noValidate>
                         <TextField
                             variant="outlined"
@@ -168,10 +149,6 @@ export default class SignIn extends React.Component{
                             value={this.state.password}
                             onChange={this.onChangePassword}
                         />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
                         <Button
                             type="submit"
                             fullWidth
@@ -180,20 +157,17 @@ export default class SignIn extends React.Component{
                             className={this.classes.submit}
                             onClick={this.handleClick}
                         >
-                            Sign In
+                            Sign Up
                         </Button>
                         <Grid container justify={"flex-end"} style={{marginTop:"5px"}}>
                             <Grid item>
-                                <Link href="/signup" variant="body2">
-                                    {"Don't have an account ? Sign Up"}
+                                <Link href="/signin" variant="body2">
+                                    {"Already have an account ? Sign In"}
                                 </Link>
                             </Grid>
                         </Grid>
                     </form>
                 </div>
-                <Box mt={6}>
-                    <Copyright />
-                </Box>
             </Container>
         );
     }
