@@ -11,6 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import auth from "../components/auth";
 import axios from 'axios';
+import Snackbar from "../components/snackbar";
 
 function Copyright() {
     return (
@@ -25,9 +26,9 @@ function Copyright() {
     );
 }
 
-//TODO register
 //TODO user alrdy connected
 //TODO wrong informations message
+//TODO Case sensitive
 const useStyles = makeStyles(theme => ({
     '@global': {
         body: {
@@ -63,11 +64,12 @@ export default class SignIn extends React.Component{
         this.handleClick = this.handleClick.bind(this);
         this.state = {
             username:'',
-            password:''
+            password:'',
+            errors:[],
         };
     };
 
-    classes(){
+    classes(){ //INFO Example of material-ui classes inside class component
         useStyles()
     }
 
@@ -85,7 +87,7 @@ export default class SignIn extends React.Component{
     handleClick(e){
         e.preventDefault();
         console.log("submitted");
-        const entry = {username:this.state.username, password:this.state.password};
+        const entry = {username:this.state.username.toLowerCase(), password:this.state.password.toLowerCase()};
         this.setState({
             username: '',
             password: '',
@@ -100,8 +102,15 @@ export default class SignIn extends React.Component{
                     auth.login(res.data.userId,() => {
                         this.props.history.push("/")
                     })
-                } else { //if token not found in db
-                    console.log("user not found in db")
+                } else if(res.data.warning) { //if token not found in db
+                    let errors=this.state.errors.slice()
+                    errors.push({message:res.data.warning,messageType:"warning"})
+                    this.setState({errors})
+
+                } else if (res.data.error){
+                    let errors=this.state.errors.slice()
+                    errors.push({message:res.data.error,messageType:"error"})
+                    this.setState({errors})
                 }
             })
             .catch( err => {throw err});
@@ -119,6 +128,10 @@ export default class SignIn extends React.Component{
                         Pictionary
                     </Typography>
                     <br/>
+                    {this.state.errors.map(({message,messageType})=> <Snackbar messageType={messageType} message={message} />
+                    )}
+
+                    {/*<Snackbar messageType={"error"} message={"Wrong Email Address or Password."}/>*/}
                     <form className={this.classes.form} noValidate>
                         <TextField
                             variant="outlined"

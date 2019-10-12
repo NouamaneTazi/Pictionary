@@ -43,6 +43,9 @@ app.post('/api/session-checker',function(req,res) {
             res.send({confirmation:"error"})
         }
         else {
+            if (!_connected_users.some(user => user.username===result.username)) { //if user doesnt exist alrdy
+                _connected_users.push({userId:result.userId, username:result.username, isAdmin:result.is_admin})
+            }
             res.send({
                 confirmation:"success",
                 userId:result.userId,
@@ -54,15 +57,15 @@ app.post('/api/session-checker',function(req,res) {
 
 app.post('/api/login', (req,res) => {
     const entry={username:req.body.username, password: req.body.password};
-    const user = {
-        username: req.body.username,
-    };
+    const user = {username: req.body.username};
     Userdb.findOne({ username: entry.username }, function(err, result) {
         if (result==null || result.password !== entry.password) {
             console.log("findOne error");
-            res.send({confirmation:"error"})
+            res.send({confirmation:"error",error:"Wrong Email Address or Password."})
         }
-        else {
+        else if (_connected_users.some(user => user.username===result.username)) { //if user doesnt exist alrdy
+            res.send({confirmation:"error",warning:"User already connected"})
+        } else {
             jwt.sign({user}, 'secretkey', { expiresIn: '8h' }, (err, token) => {
                 res.cookie('userId', 'Bearer ' + token, { maxAge: 28800, httpOnly: false });
                 console.log("token created");
@@ -135,7 +138,7 @@ app.post('/mots/delete', (req,res) => {
 });
 
 
-
+let _connected_users=[]
 let _salons={}         // salons = {id1:salon1 , id2:salon2...}
 const initializeSalons=()=>{
     Salondb.find({ },(err, salons) => {
@@ -245,13 +248,15 @@ io.sockets.on('connection', (socket)=>{
     socket.emit("updateMots",_mots)
     socket.emit("updateSalons",_salons)
     console.log('User connected');
+    socket.on('activeUserConnected',(user)=>{
+        socket.username = user.username;
+    })
     const leaveRoom=(room_id,username)=>{
         socket.leave(room_id);
         if (room_id in _salons ){
             _salons[room_id].users = _salons[room_id].users.filter(user => user.username !== username);
             if (_salons[room_id].users.length===0 &&_salons[room_id].clearTimer) _salons[room_id].clearTimer()
         }
-
         io.to(room_id).emit('userDisonnected',username)
         io.emit("updateSalons",_salons)
     }
@@ -260,6 +265,7 @@ io.sockets.on('connection', (socket)=>{
         const room_id=socket.room;
         const username=socket.username
         leaveRoom(room_id,username)
+        _connected_users=_connected_users.filter(user => user.username!==username);
         console.log('user disconnected');
     });
 
@@ -267,7 +273,6 @@ io.sockets.on('connection', (socket)=>{
         socket.leaveAll()
         socket.join(room_id);
         socket.room = room_id;
-        socket.username = username;
         if (room_id in _salons ){
             if (!_salons[room_id].users){
                 _salons[room_id].users=[]

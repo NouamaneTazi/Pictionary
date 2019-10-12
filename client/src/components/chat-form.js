@@ -29,7 +29,7 @@ export default function ChatForm(props) {
     };
     const handleSubmit =  e => {
         if (props.socket && !props.guessed_correctly) {
-            if(props.drawer!==props.user.username && message===props.currentMot) {
+            if(props.drawer!==props.user.username && message.toLowerCase()===props.currentMot.toLowerCase()) {
                 props.socket.emit('correctGuess',props.room_id,props.user.username)
             }else{
                 props.socket.emit('chatter',props.room_id,props.user.username,message);

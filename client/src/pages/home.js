@@ -30,6 +30,7 @@ export default class MemberHome extends React.Component {
         const socket = io();
         socket.on('connect', () => {
             console.log('Connected');
+            socket.emit("activeUserConnected",this.props.user)
         });
         socket.on('updateSalons',(salons)=>{
             this.setState({salons:salons})
