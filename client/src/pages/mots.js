@@ -36,7 +36,7 @@ function Form(props) {
     const handleSubmit =  e => {
         e.preventDefault(); //prevents reloading...
         if (values.name.length<3 || props.mots.includes(values.name)) return setValues({ name: "" });
-        axios.post('http://localhost:3001/mots/add',{username:props.username,mot:values.name})
+        axios.post('/mots/add',{username:props.username,mot:values.name})
             .catch(function (error) {
                 console.log(error);
             });

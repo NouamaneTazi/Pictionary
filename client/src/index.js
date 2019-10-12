@@ -21,7 +21,7 @@ class App extends React.Component{
 
     updatestatewithtoken(){
         const userId=Cookies.get('userId');
-        axios('http://localhost:3001/session-checker', {
+        axios('/session-checker', {
             method: "post",
             data: {userId:userId},
             withCredentials: true

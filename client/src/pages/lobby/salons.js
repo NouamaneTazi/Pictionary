@@ -26,7 +26,7 @@ function Form(props) {
         setValues({ name: event.target.value });
     };
     const handleSubmit =  e => {
-        axios.post('http://localhost:3001/salons/add',{username:props.username,name:values.name})
+        axios.post('/salons/add',{username:props.username,name:values.name})
             .catch(function (error) {
                 console.log(error);
             });

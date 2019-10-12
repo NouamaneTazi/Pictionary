@@ -9,8 +9,10 @@ var cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 
+const port = process.env.PORT || 3001;
+
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:`http://localhost:3000`,
     credentials:true
 }));
 app.use(express.json());
@@ -322,7 +324,6 @@ if (process.env.NODE_ENV === "production") {
     })
 }
 
-const port = process.env.PORT || 3001;
 
 server.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

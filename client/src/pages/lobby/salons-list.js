@@ -25,7 +25,7 @@ export default function SalonsList(props) {
     }));
     const classes = useStyles();
     const handleClick=(room_id)=>{
-        axios.post('http://localhost:3001/salons/delete',{room_id:room_id})
+        axios.post('/salons/delete',{room_id:room_id})
             .catch(function (error) {
                 console.log(error);
             })
