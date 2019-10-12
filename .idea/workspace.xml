@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b4df431-56c9-4937-bc72-52b1351f149d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-    </list>
+    <list default="true" id="9b4df431-56c9-4937-bc72-52b1351f149d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -28,11 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+            <state relative-caret-position="95">
+              <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mots.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/pages/mots.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -58,7 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cell</find>
       <find>maxTime</find>
       <find>timer</find>
       <find>updateD</find>
@@ -88,6 +94,7 @@
       <find>index.html</find>
       <find>http</find>
       <find>router</find>
+      <find>true</find>
     </findStrings>
     <replaceStrings>
       <replace>this.props.socket</replace>
@@ -177,7 +184,6 @@
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/client/package.json" />
-        <option value="$PROJECT_DIR$/client/src/pages/mots.js" />
         <option value="$PROJECT_DIR$/client/src/pages/salon/grid-salon.js" />
         <option value="$PROJECT_DIR$/client/src/pages/lobby/salons.js" />
         <option value="$PROJECT_DIR$/server/routes/users.js" />
@@ -185,6 +191,7 @@
         <option value="$PROJECT_DIR$/server/index.html" />
         <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
+        <option value="$PROJECT_DIR$/client/src/pages/mots.js" />
       </list>
     </option>
   </component>
@@ -230,13 +237,20 @@
             <path>
               <item name="Pictionary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pictionary" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pictionary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pictionary" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pictionary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pictionary" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,7 +340,7 @@
       <workItem from="1570755418151" duration="1134000" />
       <workItem from="1570783661213" duration="992000" />
       <workItem from="1570801827801" duration="10522000" />
-      <workItem from="1570885223181" duration="6865000" />
+      <workItem from="1570885223181" duration="7130000" />
     </task>
     <task id="LOCAL-00001" summary="Creation">
       <created>1570711172707</created>
@@ -360,7 +374,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368106000" />
+    <option name="totallyTimeSpent" value="368371000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -572,13 +586,6 @@
         <state relative-caret-position="-885" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/pages/mots.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/pages/lobby/salons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -639,8 +646,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+        <state relative-caret-position="95">
+          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/pages/mots.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
         </state>
       </provider>
     </entry>
