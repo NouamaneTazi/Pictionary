@@ -25,6 +25,9 @@ function Copyright() {
     );
 }
 
+//TODO register
+//TODO user alrdy connected
+//TODO wrong informations message
 const useStyles = makeStyles(theme => ({
     '@global': {
         body: {

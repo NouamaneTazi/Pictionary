@@ -162,8 +162,10 @@ initializeSalons()
 initializeMots()
 
 
-const maxTime=10, timeToNextRound=3,nombre_manches=5 //in seconds
+const maxTime=60, timeToNextRound=3,nombre_manches=3 //in seconds
 
+//TODO editable maxTime
+//TODO shorten server.js
 io.sockets.on('connection', (socket)=>{
     const startTimer=(room_id)=>{
         _salons[room_id].timeleft=null;

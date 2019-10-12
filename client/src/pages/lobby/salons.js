@@ -48,6 +48,8 @@ function Form(props) {
     )
 }
 
+//TODO Number of connected users
+
 export default class Salons extends React.Component {
     constructor(props) {
         super(props);
