@@ -11,8 +11,21 @@ const mongoose = require('mongoose');
 
 const port = process.env.PORT || 3001;
 
+// const allowCrossDomain = function(req, res, next) {
+//     res.header('Access-Control-Allow-Origin', "http://localhost:3000");
+//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type');
+//     res.header('Access-Control-Allow-Credentials', 'true')
+//     next();
+// }
+//
+// app.use(allowCrossDomain);
+
 app.use(cors({
-    origin:[`http://localhost:3000`,"http://nouamane-pictionary.herokuapp.com","nouamane-pictionary.herokuapp.com","https://nouamane-pictionary.herokuapp.com",/\.nouamane-pictionary.herokuapp\.com$/],
+    // origin:[`http://localhost:3000`,"http://nouamane-pictionary.herokuapp.com","nouamane-pictionary.herokuapp.com","https://nouamane-pictionary.herokuapp.com",/\.nouamane-pictionary.herokuapp\.com$/],
+    origin: function(origin, callback){
+        return callback(null, true);
+    },
     credentials:true
 }));
 // INFO credentials:true because HTTP sessions are a tried and true mechanism to deal with authentication on the web.
