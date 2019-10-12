@@ -12,8 +12,7 @@ const mongoose = require('mongoose');
 const port = process.env.PORT || 3001;
 
 app.use(cors({
-    // origin:`http://localhost:3000`,
-    origin:false,
+    origin:`http://localhost:3000`,
     credentials:true
 }));
 // INFO credentials:true because HTTP sessions are a tried and true mechanism to deal with authentication on the web.
