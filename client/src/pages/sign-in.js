@@ -87,7 +87,7 @@ export default class SignIn extends React.Component{
             username: '',
             password: '',
         });
-        axios('http://localhost:3001/api/login', {
+        axios('/api/login', {
             method: "post",
             data: entry,
             withCredentials: true

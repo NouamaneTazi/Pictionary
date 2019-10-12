@@ -9,7 +9,7 @@ export default new class {
     }
     logout(username,cb){
         Cookies.remove('userId')
-        axios('http://localhost:3001/api/logout', {
+        axios('/api/logout', {
             method: "post",
             data: {username:username},
             withCredentials: true

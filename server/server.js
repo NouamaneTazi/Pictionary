@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 const port = process.env.PORT || 3001;
 
 app.use(cors({
-    // origin:[`http://localhost:3000`]
+    // origin:[`http://localhost:3000`],
     origin: function(origin, callback){
         return callback(null, true);
     },
