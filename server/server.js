@@ -11,18 +11,8 @@ const mongoose = require('mongoose');
 
 const port = process.env.PORT || 3001;
 
-// const allowCrossDomain = function(req, res, next) {
-//     res.header('Access-Control-Allow-Origin', "http://localhost:3000");
-//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-//     res.header('Access-Control-Allow-Headers', 'Content-Type');
-//     res.header('Access-Control-Allow-Credentials', 'true')
-//     next();
-// }
-//
-// app.use(allowCrossDomain);
-
 app.use(cors({
-    // origin:[`http://localhost:3000`,"http://nouamane-pictionary.herokuapp.com","nouamane-pictionary.herokuapp.com","https://nouamane-pictionary.herokuapp.com",/\.nouamane-pictionary.herokuapp\.com$/],
+    // origin:[`http://localhost:3000`]
     origin: function(origin, callback){
         return callback(null, true);
     },
@@ -61,11 +51,6 @@ app.post('/api/session-checker',function(req,res) {
         }
     });
 });
-//
-// app.get('/',function(req,res) {
-//     res.send(req.cookies.access_token);
-// });
-
 
 app.post('/api/login', (req,res) => {
     const entry={username:req.body.username, password: req.body.password};
@@ -101,9 +86,30 @@ app.post('/api/logout', (req) => {
     })
 })
 
+app.post('/salons/add', (req,res) => {
+    let data={
+        name:req.body.name ,
+        created_at:Date(),
+        created_by:req.body.username
+    }
+    let new_salon= new Salondb(data)
+    new_salon.save((err,salon)=>{
+        data._id=salon.id;
+        data.users=[];
+        _salons[salon.id]= data
+        io.sockets.emit("updateSalons",_salons)
+    })
 
-app.use('/salons', require('./routes/salons'))
-
+    res.send(true)
+});
+app.post('/salons/delete', (req,res) => {
+    Salondb.deleteOne({_id:req.body.room_id}, function (err) {
+        if (err) throw err;
+    });
+    delete _salons[req.body.room_id]
+    io.sockets.emit("updateSalons",_salons)
+    res.send(true)
+});
 
 app.post('/mots/add', (req,res) => {
     let data={

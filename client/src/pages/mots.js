@@ -67,7 +67,7 @@ export default function Mots(props) {
     const listItems = props.mots.map((mot,index) =>
         <div key={index}>
             <ListItem button dense={true}>
-                <ListItemText button
+                <ListItemText
                     onClick={()=>handleClick(mot)}
                     primary={mot}
                     align={"center"}
