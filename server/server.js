@@ -95,7 +95,6 @@ app.post('/api/signup', (req,res) => {
         }
     });
 });
-
 app.post('/api/logout', (req) => {
     Userdb.updateOne({username:req.body.username},{ userId: ""} ,(err)=>{
         if (err) throw err;
