@@ -11,10 +11,6 @@ import axios from "axios/index";
 import {createBrowserHistory} from "history";
 require('dotenv').config();
 
-// use default theme
-// const theme = createMuiTheme();
-
-// Or Create your Own theme:
 const theme = createMuiTheme({
         palette: {
             primary: {
@@ -22,7 +18,7 @@ const theme = createMuiTheme({
             }
         }
     },
-)
+);
 
 class App extends React.Component{
     constructor(props) {
@@ -52,7 +48,7 @@ class App extends React.Component{
                     is_fetching:false
                 })
             }else{
-                Cookies.remove('userId')
+                Cookies.remove('userId');
                 this.setState({})
             }
         }).catch( err => {throw err});

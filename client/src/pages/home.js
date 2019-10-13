@@ -14,7 +14,7 @@ export default class MemberHome extends React.Component {
             mots:[],
         };
     }
-
+    //TODO Add Gitlab CI
     componentDidMount(){
         this.props.history.listen((location, action) => {
             if (location.pathname) console.log(action, location.pathname, location.state);
