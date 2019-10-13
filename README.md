@@ -1,6 +1,14 @@
-# Project Title
+# Pictionary
 
-One Paragraph of project description goes here
+A single-page-application (SPA) where one user draws a word and the other users should guess try to guess it.
+
+[Live demo](https://nouamane-pictionary.herokuapp.com)
+
+## Technical description
+*  Backend : NodeJs with Express, Socket IO, Mongoose for Database.
+*  Frontend : React, Axios for HTTP requests.
+*  Linting : ESlint
+*  Deployment : Heroku
 
 ## Getting Started
 
@@ -8,53 +16,57 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+
+For [nodemon](https://www.npmjs.com/package/nodemon) (a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.)
 
 ```
-Give examples
+npm i -g nodemon
 ```
+For ESlint
 
-### Installing
+```
+npm i -g eslint-cli
+```
+For deployment on heroku
+
+```
+npm i -g heroku
+```
+### Installing used Packages
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+We start by installing the Packages
 
 ```
-Give the example
+npm run install
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+In the console, after installing eslint globally, run :
 ```
-Give an example
+eslint ./
 ```
 
-### And coding style tests
+### Running the website
 
-Explain what these tests test and why
+For development, run these two commands in two different consoles :
 
 ```
-Give an example
+cd client && npm start
+cd server && nodemon server
+```
+
+For production :
+
+```
+npm run dev
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+After 
 
 ## Built With
 
