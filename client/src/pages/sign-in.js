@@ -27,9 +27,6 @@ function Copyright() {
     );
 }
 
-//TODO user alrdy connected
-//TODO wrong informations message
-//TODO Case sensitive
 const useStyles = makeStyles(theme => ({
     '@global': {
         body: {
@@ -37,12 +34,6 @@ const useStyles = makeStyles(theme => ({
             margin: "50px",
             backgroundColor: theme.palette.common.white,
         },
-    },
-    paper: {
-
-        // display: 'flex',
-        // flexDirection: 'column',
-        // alignItems: 'center',
     },
     avatar: {
         margin: theme.spacing(1),

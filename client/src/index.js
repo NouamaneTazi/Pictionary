@@ -1,4 +1,6 @@
 import React from 'react';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
 import ReactDOM from 'react-dom';
 import SignIn from "./pages/sign-in"
 import SignUp from "./pages/sign-up"
@@ -8,6 +10,19 @@ import Cookies from 'js-cookie';
 import axios from "axios/index";
 import {createBrowserHistory} from "history";
 require('dotenv').config();
+
+// use default theme
+// const theme = createMuiTheme();
+
+// Or Create your Own theme:
+const theme = createMuiTheme({
+        palette: {
+            primary: {
+                main: '#2b8ae3'
+            }
+        }
+    },
+)
 
 class App extends React.Component{
     constructor(props) {
@@ -62,14 +77,14 @@ class App extends React.Component{
     render(){
         return (
             <div className="App">
-                <Router history={this.state.history}>
-                    <Switch>
-                        <Route exact path="/signin" component={SignIn}/>
-                        <Route exact path="/signup" component={SignUp}/>
-                        <Route path="/" render={ (props)=>this.protectedRoute(props,Home) } />
-                        {/*<Route path="*" component={() => "404 NOT FOUND"} />*/}
-                    </Switch>
-                </Router>
+                    <Router history={this.state.history}>
+                        <Switch>
+                            <Route exact path="/signin" component={SignIn}/>
+                            <Route exact path="/signup" component={SignUp}/>
+                            <Route path="/" render={ (props)=>this.protectedRoute(props,Home) } />
+                            {/*<Route path="*" component={() => "404 NOT FOUND"} />*/}
+                        </Switch>
+                    </Router>
             </div>
         );
     }
@@ -78,7 +93,9 @@ class App extends React.Component{
 
 const routes = (
     <BrowserRouter>
-        <App />
+        <MuiThemeProvider theme={theme}>
+            <App />
+        </MuiThemeProvider>
     </BrowserRouter>
 );
 

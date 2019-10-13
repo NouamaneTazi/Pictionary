@@ -123,7 +123,15 @@ class DrawingApp extends Component {
                     {this.props.username===this.props.drawer && !this.props.time_is_up?
                         <div >
                             <Grid item style={{backgroundColor:"white"}}>
-                                <canvas  width={"729"} height={"350"} className="display"  ref={this.display} onMouseMove={this.handleDisplayMouseMove.bind(this)} onMouseDown={this.handleDisplayMouseDown.bind(this)} onMouseUp={this.handleDisplayMouseUp.bind(this)}/>
+                                <canvas
+                                    width={"729"}
+                                    height={"350"}
+                                    className="display"
+                                    ref={this.display}
+                                    onMouseMove={this.handleDisplayMouseMove.bind(this)}
+                                    onMouseDown={this.handleDisplayMouseDown.bind(this)}
+                                    onMouseUp={this.handleDisplayMouseUp.bind(this)}
+                                />
                             </Grid>
                             <Grid item>
                                 <Typography align={'center'}  component={'div'}> {/* component={'span'} cz error <div> cannot appear as a descendant of <p>.*/}
