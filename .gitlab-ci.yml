@@ -11,4 +11,5 @@ eslint:
  # What scripts do we want to run?
  script:
     - npm install
+    - npm install eslint-config-react-app
     - npm run lint
