@@ -5,8 +5,10 @@ A single-page-application (SPA) where one user draws a word and the other users 
 [Live demo](https://nouamane-pictionary.herokuapp.com)
 
 ## Technical description
-*  Backend : NodeJs with Express, Socket IO, Mongoose for Database.
-*  Frontend : React, Axios for HTTP requests.
+*  Back-end : NodeJs with Express, Socket IO, Mongoose for Database.
+*  Front-end : React [Material UI](https://material-ui.com), Axios for HTTP requests.
+*  Authentification : JWT signed token stored inside browser cookies.
+*  Database : MongoDB
 *  Linting : ESlint
 *  Deployment : Heroku
 
@@ -42,7 +44,7 @@ We start by installing the Packages
 npm run install
 ```
 
-## Running the tests
+### Running the tests
 
 In the console, after installing eslint globally, run :
 ```
@@ -53,12 +55,16 @@ eslint ./
 
 For development, run these two commands in two different consoles :
 
+>  To lunch the back-end
 ```
-cd client && npm start
 cd server && nodemon server
 ```
+>  To lunch the front-end
+```
+cd client && npm start
+```
 
-For production :
+For production : *(lunches both the back and the front)*
 
 ```
 npm run dev
@@ -66,34 +72,45 @@ npm run dev
 
 ## Deployment
 
-After 
+After logging in with your heroku account with `heroku login`, run in the console :
 
-## Built With
+```
+git add .
+git commit -m "Initial commit"
+git push heroku master
+```
+## App Usage
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Some already existing accounts:
+```
+normal user >> username : user | password : user
+admin >> username : admin | password : admin
+```
 
-## Contributing
+### Features 
+* [x]  Show error messages if user already connected or wrong credentials.
+* [x]  Being able to register. Displays error message if existing username.
+* [x]  Keeps the authentification upon reloading page through a token that becomes invalid after a certain amount of time or upon logging out
+* [x]  Add, join and delete own rooms if user, or all rooms if admin.
+* [x]  Add or remove the words' choices in the game if admin.
+* [x]  Synchronise drawing in real time between users in same room.
+* [x]  Chat feature in rooms.
+* [x]  Check if correct guess, then mute this user.
+* [x]  Timer in every room, that restarts every round or upon drawer leaving room. The game restarts upon 5 rounds.
+* [x]  Show leaderboards in the end of a game. +1 point if user guessed correctly.
+* [x]  Drawer can change colors and size of the brush, use the eraser or clear the canvas.
+* [ ]  Responsive canvas size.
+* [ ]  Improve score calculation method
+* [ ]  Users who guessed the correct word can still chat but only among them and the drawer.
+* [ ]  Validate authentification's data before processing it for more security.
+* [ ]  Show what's been drawn for a recently joined user
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
+## Author
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* Nouamane Tazi
 
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Hat tip to [DTY - CentraleSupélec](https://paris-digital-lab.com) for supervising this project.
