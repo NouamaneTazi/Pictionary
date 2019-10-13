@@ -1,6 +1,6 @@
 image: node
 
-stage:
+stages:
  # I just want to lint, so I will create a "lint" stage
  - lint
 
