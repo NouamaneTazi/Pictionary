@@ -10,6 +10,7 @@ A single-page-application (SPA) where one user draws a word and the other users 
 *  Authentification : JWT signed token stored inside browser cookies.
 *  Database : MongoDB
 *  Linting : ESlint
+*  Gitlab CI : For linting.
 *  Deployment : Heroku
 
 ## Getting Started
