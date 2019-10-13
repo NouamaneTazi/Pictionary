@@ -5,7 +5,7 @@ A single-page-application (SPA) where one user draws a word and the other users 
 [Live demo](https://nouamane-pictionary.herokuapp.com)
 
 ## Technical description
-*  Back-end : NodeJs with Express, Socket IO, Mongoose for Database.
+*  Back-end : NodeJs *(v10.16.3)* with Express, Socket IO, Mongoose for Database.
 *  Front-end : React [Material UI](https://material-ui.com), Axios for HTTP requests.
 *  Authentification : JWT signed token stored inside browser cookies.
 *  Database : MongoDB
