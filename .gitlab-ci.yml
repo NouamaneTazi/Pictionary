@@ -10,4 +10,5 @@ eslint:
  stage: lint
  # What scripts do we want to run?
  script:
+    - npm install eslint
     - npm run lint
