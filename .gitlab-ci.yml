@@ -1,4 +1,6 @@
 image: node
+  script: 
+    - echo "image node"
 
 stage:
  # I just want to lint, so I will create a "lint" stage
