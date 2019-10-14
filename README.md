@@ -2,7 +2,7 @@
 
 A single-page-application (SPA) where one user draws a word and the other users should guess try to guess it.
 
-[Live demo](https://nouamane-pictionary.herokuapp.com)
+[Live demo] of the website on Heroku.(https://nouamane-pictionary.herokuapp.com)
 
 ## Technical description
 *  Back-end : NodeJs *(v10.16.3)* with Express, Socket IO, Mongoose for Database.
@@ -105,6 +105,7 @@ admin >> username : admin | password : admin
 * [ ]  Users who guessed the correct word can still chat but only among them and the drawer.
 * [ ]  Validate authentification's data before processing it for more security.
 * [ ]  Show what's been drawn for a recently joined user
+* [ ]  Resize brush/eraser size through mouse scroll
 
 
 ## Author
